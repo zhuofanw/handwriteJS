@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Call</title>
+		<script src="../src//call.js"></script>
+	</head>
+	<script>
+		// 声明一个函数
+		function add(a, b) {
+			console.log(this);
+			return a + b + this.c;
+		}
+		// 声明一个对象
+		let obj = {
+			c: 521,
+		};
+		//添加全局属性
+		window.c = 1314;
+
+		//执行call函数
+		console.log(call(add, obj, 10, 20));
+		console.log(call(add, undefined, 30, 40));
+		console.log(apply(add, obj, [10, 20]));
+		console.log(apply(add, undefined, [30, 40]));
+	</script>
+	<body></body>
+</html>
