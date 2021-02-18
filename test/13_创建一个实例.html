@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>13_创建一个实例</title>
+		<script src="../src/newInstance.js"></script>
+	</head>
+	<body>
+		<script>
+			function Person(name, age) {
+				this.name = name;
+				this.age = age;
+			}
+			let obj = newInstance(Person, "Frank", 25);
+			console.log("13_创建一个实例::", obj);
+		</script>
+	</body>
+</html>
