@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>18_深拷贝</title>
+		<script src="../src/deepClone.js"></script>
+	</head>
+	<body>
+		<script>
+			const obj = {
+				a: [{ x: 2 }, { y: 4 }],
+				b: ["e", "f", "g"],
+				c: { m: 1 },
+				d: function () {},
+			};
+
+			obj.b.push(obj.c);
+			obj.c.n = obj.b;
+
+			const result = deepClone(obj);
+
+			console.log("obj::", obj);
+			console.log("result::", result);
+		</script>
+	</body>
+</html>
